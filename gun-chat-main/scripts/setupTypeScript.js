@@ -38,6 +38,12 @@ packageJSON.scripts = Object.assign(packageJSON.scripts, {
 // Write the package JSON
 fs.writeFileSync(path.join(projectRoot, "package.json"), JSON.stringify(packageJSON, null, "  "))
 
+//pi-extr
+packageJSON.scripts = Object.assign(packageJSON.scripts, {
+  "check": "svelte-check --tsconfig ./tsconfig.json"
+})
+
+
 // mv src/main.js to main.ts - note, we need to edit rollup.config.js for this too
 const beforeMainJSPath = path.join(projectRoot, "src", "main.js")
 const afterMainTSPath = path.join(projectRoot, "src", "main.ts")
