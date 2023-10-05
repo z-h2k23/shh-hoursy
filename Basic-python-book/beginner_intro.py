@@ -25,6 +25,7 @@ print(name, "is", age, "years old.")
 
 x = 5
 y = 3
+z=8
 
 add = x + y
 sub = x - y
